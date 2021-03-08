@@ -32,7 +32,8 @@ fn panic(info: &PanicInfo) -> ! {
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
     println!("Hello World from Leo's OS written in Rust!");
-    println!("Current git sha: {}", env!("GIT_HASH"));
+    println!("Git Commit SHA: {}", env!("GIT_HASH"));
+    println!("Version: {}", env!("GIT_TAG"));
 
     #[cfg(test)]
     test_main();
