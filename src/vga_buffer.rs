@@ -157,8 +157,8 @@ fn test_println_many() {
 
 #[test_case]
 fn test_println_output() {
-    /// clear screen
-    for i in 0..BUFFER_HEIGHT {
+    // clear screen
+    for _ in 0..BUFFER_HEIGHT {
         vga_print!("\n");
     }
 

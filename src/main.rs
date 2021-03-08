@@ -29,11 +29,10 @@ fn panic(info: &PanicInfo) -> ! {
     loop {}
 }
 
-static HELLO: &[u8] = b"Hello World!";
-
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
-    println!("Hello World{}", "!");
+    println!("Hello World from Leo's OS written in Rust!");
+    println!("Current git sha: {}", env!("GIT_HASH"));
 
     #[cfg(test)]
     test_main();
